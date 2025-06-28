@@ -50,4 +50,3 @@ dist/
 .streamlit/*.json
 .streamlit/*.lock
 
-*.csv
