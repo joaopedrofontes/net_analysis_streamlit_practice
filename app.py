@@ -11,7 +11,6 @@ st.sidebar.header("Opções")
 physics = st.sidebar.checkbox("Habilitar interações físicas (Pyvis)", value=True)
 top_k = st.sidebar.slider("Top-K nós por centralidade", 5, 30, 10)
 
-# 🔗 Link direto (raw) do GitHub
 CSV_URL = "https://raw.githubusercontent.com/joaopedrofontes/net_analysis_streamlit_practice/refs/heads/main/VRA_2024_12.csv"
 
 try:
