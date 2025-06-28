@@ -1,0 +1,53 @@
+# Ambiente virtual
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+
+# Dependências
+*.egg-info/
+*.egg
+*.whl
+*.pyd
+*.pyc
+*.pyo
+
+# Diretórios de cache
+__pycache__/
+*.py[cod]
+*.so
+*.log
+
+
+# Arquivos de configuração locais
+.DS_Store
+*.sqlite3
+*.db
+*.log
+*.bak
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Bibliotecas (caso tenha lib/ local)
+lib/
+build/
+dist/
+
+# Jupyter Notebooks checkpoint (se usar)
+.ipynb_checkpoints/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.~*
+
+# Streamlit cache
+.streamlit/config.toml
+.streamlit/*.json
+.streamlit/*.lock
+
+*.csv
