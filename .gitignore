@@ -49,4 +49,3 @@ dist/
 .streamlit/config.toml
 .streamlit/*.json
 .streamlit/*.lock
-

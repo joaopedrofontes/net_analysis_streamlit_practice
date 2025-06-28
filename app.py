@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -12,13 +11,11 @@ st.sidebar.header("Opções")
 physics = st.sidebar.checkbox("Habilitar interações físicas (Pyvis)", value=True)
 top_k = st.sidebar.slider("Top-K nós por centralidade", 5, 30, 10)
 
+# 🔗 Link direto (raw) do GitHub
+CSV_URL = "https://raw.githubusercontent.com/joaopedrofontes/net_analysis_streamlit_practice/refs/heads/main/VRA_2024_12.csv"
 
-CSV_PATH = "VRA_2024_12.csv"
-
-if not os.path.exists(CSV_PATH):
-    st.error(f"O arquivo '{CSV_PATH}' não foi encontrado.")
-else:
-    df = carregar_dados(CSV_PATH)
+try:
+    df = carregar_dados(CSV_URL)
     G = construir_grafo(df)
     gerar_visualizacao_pyvis(G, physics=physics)
 
@@ -50,3 +47,6 @@ else:
         st.markdown(f"### {tipo} Centrality")
         top_nos = sorted(valores.items(), key=lambda x: x[1], reverse=True)[:top_k]
         st.table(pd.DataFrame(top_nos, columns=["Aeroporto", "Centralidade"]))
+
+except Exception as e:
+    st.error(f"Erro ao carregar ou processar os dados: {e}")
